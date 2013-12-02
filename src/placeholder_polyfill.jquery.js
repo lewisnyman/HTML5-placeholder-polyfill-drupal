@@ -1,7 +1,7 @@
 /**
 * HTML5 placeholder polyfill
 * @requires jQuery - tested with 1.6.2 but might as well work with older versions
-* 
+*
 * code: https://github.com/ginader/HTML5-placeholder-polyfill
 * please report issues at: https://github.com/ginader/HTML5-placeholder-polyfill/issues
 *
@@ -9,7 +9,7 @@
 * Dual licensed under the MIT and GPL licenses:
 * http://www.opensource.org/licenses/mit-license.php
 * http://www.gnu.org/licenses/gpl.html
-* 
+*
 */
 
 (function($) {
@@ -83,8 +83,8 @@
             visibleToScreenreadersHideClass : 'placeholder-hide-except-screenreader', // css class is used to visually hide the placeholder
             visibleToNoneHideClass : 'placeholder-hide', // css class used to hide the placeholder for all
             hideOnFocus : false, // either hide the placeholder on focus or on type
-            removeLabelClass : 'visuallyhidden', // remove this class from a label (to fix hidden labels)
-            hiddenOverrideClass : 'visuallyhidden-with-placeholder', // replace the label above with this class
+            removeLabelClass : 'element-invisible', // remove this class from a label (to fix hidden labels)
+            hiddenOverrideClass : 'element-invisible-with-placeholder', // replace the label above with this class
             forceHiddenOverride : true, // allow the replace of the removeLabelClass with hiddenOverrideClass or not
             forceApply : false, // apply the polyfill even for browser with native support
             autoInit : true // init automatically or not
