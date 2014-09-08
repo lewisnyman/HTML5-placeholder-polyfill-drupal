@@ -59,17 +59,30 @@ module.exports = function(grunt) {
       }
     },
     markdown: {
-      all: {
-        files: ['readme.markdown','version-history.markdown'],
+      options: {
         template: 'web/template.html',
-        dest: 'web',
-        options: {
-          gfm: true,
+        markdownOptions: {
           codeLines: {
             before: '<span>',
             after: '</span>'
           }
         }
+      },
+      all: {
+        files: [
+          {
+            expand: true,
+            src: '*.markdown',
+            dest: 'web/',
+            ext: '.html'
+          }
+        ]
+      }
+    },
+    bump: {
+      options: {
+        files: ['package.json', 'component.json', 'bower.json'],
+        push: false
       }
     },
     watch: {
@@ -89,5 +102,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-markdown');
+  grunt.loadNpmTasks('grunt-bump');
 
 };
